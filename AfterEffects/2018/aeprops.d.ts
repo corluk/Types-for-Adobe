@@ -40,7 +40,7 @@ declare namespace asProperty{
 
 }
 
-declare namespace castLayerTo  {
+declare namespace castLayer  {
 
         interface Textable  extends TextLayer {
             sourceText? : asProperty.TextDoc 
