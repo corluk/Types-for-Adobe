@@ -1,6 +1,6 @@
 /// <reference path="../../shared/global.d.ts" />
 /// <reference path="../../shared/ScriptUI.d.ts" />
-
+/// <reference path="./aeprops.d.ts" />
 declare class Global {
   app: Application
 }
