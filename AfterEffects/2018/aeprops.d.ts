@@ -24,19 +24,29 @@ declare namespace ExtendedProperty {
 
 declare namespace asProperty{
 
-        interface SourceText extends ExtendedProperty.Generic<TextDocument> {} 
-        interface Scale extends ExtendedProperty.Generic<[number,number]> {} 
+        interface TextDoc  extends ExtendedProperty.Generic<TextDocument> {} 
+        interface twoD extends ExtendedProperty.Generic<[number,number]> {} 
+        interface threeD extends ExtendedProperty.Generic<[number,number,number]> {} 
+        interface fourD extends ExtendedProperty.Generic<[number,number,number,number]> {} 
+        interface Nullable extends ExtendedProperty.Generic<void> {} 
+        interface Boolean  extends ExtendedProperty.Generic<boolean> {} 
+        interface Number  extends ExtendedProperty.Generic<number> {} 
+        interface Marker extends ExtendedProperty.Generic<MarkerValue> {} 
+        interface ShapeValue extends ExtendedProperty.Generic<Shape> {} 
+
+    
+
 
 
 }
 
-declare namespace Layerto {
+declare namespace castLayerTo  {
 
         interface Textable  extends TextLayer {
-            sourceText? : asProperty.SourceText
+            sourceText? : asProperty.TextDoc 
         }
-        interface Transforable extends Layer {
-            scale : asProperty.SourceText
+        interface Transformable extends Layer {
+            scale : asProperty.twoD
         }
 
 
