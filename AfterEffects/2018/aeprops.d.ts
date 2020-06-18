@@ -90,10 +90,10 @@ declare namespace Effects {
             "End Point" : Number 
         
         }
-        interface A1 {
-            x : AudioSpectrum["Audio Layer"]
+        interface AddGrain {
+            "Viewing Mode" : Property 
+            "Preset" : Property
         }
-}
 
 
  
