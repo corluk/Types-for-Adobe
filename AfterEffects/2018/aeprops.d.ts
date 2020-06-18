@@ -18,10 +18,33 @@ declare namespace ExtendedProperty {
 
     }
 
-
-
+   
 }
+declare namespace ExtendedLayer {
+    interface Generic2dLayer extends Layer {
 
+        scale : asProperty.twoD
+        opacity : asProperty.Number 
+        position : asProperty.twoD
+        rotation: asProperty.twoD
+        anchorPoint : asProperty.twoD
+      
+
+        
+    }
+    interface Generic3dLayer extends Layer {
+
+        scale : asProperty.threeD
+        opacity : asProperty.Number 
+        position : asProperty.threeD
+        rotationz : asProperty.Number
+        anchorPoint : asProperty.threeD
+        xRotation : asProperty.Number 
+        yRotation : asProperty.Number 
+        zRotation : asProperty.Number  
+        orientation : asProperty.threeD
+    }
+}
 declare namespace asProperty{
 
         interface TextDoc  extends ExtendedProperty.Generic<TextDocument> {} 
@@ -45,12 +68,31 @@ declare namespace castLayer  {
         interface Textable  extends TextLayer {
             sourceText? : asProperty.TextDoc 
         }
-        interface Transformable extends Layer {
-            scale : asProperty.twoD
+        interface Transformable extends ExtendedLayer.Generic2dLayer {
+             
+            
+        }
+        interface Transformable3D extends ExtendedLayer.Generic3dLayer {
+            
         }
 
 
 
+
+}
+
+declare namespace Effects {
+
+        interface AudioSpectrum {
+
+            "Audio Layer" : Number 
+            "Start Point" : Number 
+            "End Point" : Number 
+        
+        }
+        interface A1 {
+            x : AudioSpectrum["Audio Layer"]
+        }
 }
 
 
