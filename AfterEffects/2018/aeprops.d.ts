@@ -21,7 +21,7 @@ declare namespace ExtendedProperty {
    
 }
 declare namespace ExtendedLayer {
-    interface Generic2dLayer extends Layer {
+    interface Layer2d  extends Layer {
 
         scale : asProperty.twoD
         opacity : asProperty.Number 
@@ -32,7 +32,7 @@ declare namespace ExtendedLayer {
 
         
     }
-    interface Generic3dLayer extends Layer {
+    interface Layer3d  extends Layer {
 
         scale : asProperty.threeD
         opacity : asProperty.Number 
@@ -68,13 +68,7 @@ declare namespace castLayer  {
         interface Textable  extends TextLayer {
             sourceText? : asProperty.TextDoc 
         }
-        interface Transformable extends ExtendedLayer.Generic2dLayer {
-             
-            
-        }
-        interface Transformable3D extends ExtendedLayer.Generic3dLayer {
-            
-        }
+         
 
 
 
@@ -95,5 +89,7 @@ declare namespace Effects {
             "Preset" : Property
         }
 
+
+}
 
  
